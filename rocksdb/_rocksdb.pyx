@@ -1390,6 +1390,24 @@ cdef class Options(ColumnFamilyOptions):
         def __set__(self, value):
             self.opts.allow_mmap_writes = value
 
+    property use_direct_reads:
+        def __get__(self):
+            return self.opts.use_direct_reads
+        def __set__(self, value):
+            self.opts.use_direct_reads = value
+
+    property use_direct_io_for_flush_and_compaction:
+        def __get__(self):
+            return self.opts.use_direct_io_for_flush_and_compaction
+        def __set__(self, value):
+            self.opts.use_direct_io_for_flush_and_compaction = value
+
+    property allow_fallocate:
+        def __get__(self):
+            return self.opts.allow_fallocate
+        def __set__(self, value):
+            self.opts.allow_fallocate = value
+
     property is_fd_close_on_exec:
         def __get__(self):
             return self.opts.is_fd_close_on_exec
