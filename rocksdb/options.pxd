@@ -90,6 +90,7 @@ cdef extern from "rocksdb/options.h" namespace "rocksdb":
         cpp_bool allow_mmap_writes
         cpp_bool use_direct_reads
         cpp_bool use_direct_io_for_flush_and_compaction
+        size_t writable_file_max_buffer_size
         cpp_bool allow_fallocate
         cpp_bool is_fd_close_on_exec
         cpp_bool skip_log_error_on_recovery

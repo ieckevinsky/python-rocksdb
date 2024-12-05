@@ -1402,6 +1402,13 @@ cdef class Options(ColumnFamilyOptions):
         def __set__(self, value):
             self.opts.use_direct_io_for_flush_and_compaction = value
 
+    property writable_file_max_buffer_size:
+        def __get__(self):
+            return self.opts.writable_file_max_buffer_size
+        def __set__(self, value):
+            self.opts.writable_file_max_buffer_size = value
+
+
     property allow_fallocate:
         def __get__(self):
             return self.opts.allow_fallocate
